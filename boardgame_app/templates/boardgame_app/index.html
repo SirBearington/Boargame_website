@@ -1,7 +1,14 @@
 {% extends "boardgame_app/base.html" %}
 
-{% block content %}
+{% block page_header %}
+    
+    <div class="jumbotron">
+        <h1 class="display-3">Track your board games.</h1>
+        <p class="lead">Keep track of all of your board games. Whenever you learn or buy a new board game, make an
+            entry regarding rules and other interesting things that you know about the board game.</p>
+    
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+            role="button">Register &raquo;</a>
+    </div>
 
-<p>The board game website helps you keep track of your boardgames.</p>
-
-{% endblock content %}
+{% endblock page_header %}
