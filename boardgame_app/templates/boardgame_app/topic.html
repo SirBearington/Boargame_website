@@ -5,7 +5,7 @@
 
     {% block content %}
     <p>
-        <a href="{% url 'boardgame_app:new_entry' topic.id %}">Add new entry</a>
+        <a href="{% url 'boardgame_app:new_entry' topic.id %}">Add new description</a>
     </p>
     {% for entry in entries %}
 
@@ -13,7 +13,7 @@
         <h4 class="card-header">
             {{ entry.date_added|date:'M d, Y H:i' }}
             <small><a href="{% url 'boardgame_app:edit_entry' entry.id %}">
-                edit entry</a></small>
+                Edit description</a></small>
         </h4>
 
         <div class="card-body">
