@@ -3,12 +3,12 @@
 {% block content %}
 
     <p><a href="{% url 'boardgame_app:topic' topic.id %}">{{ topic }}</a></p>
-    <p>Add a new entry:</p>
+    <p>Add a new description:</p>
     
     <form action="{% url 'boardgame_app:new_entry' topic.id %}" method='post'>
         {% csrf_token %}
         {{ form.as_p }}
-        <button name='submit'>Add entry</button>
+        <button name='submit'>Add description</button>
     </form>
 
 {% endblock content %}
