@@ -4,7 +4,7 @@
 
 <p><a href="{% url 'boardgame_app:topic' topic.id %}">{{ topic }}</a></p>
 
-<p>Edit entry:</p>
+<p>Edit description :</p>
 
 <form action="{% url 'boardgame_app:edit_entry' entry.id %}" method='post'>
 	{% csrf_token %}
