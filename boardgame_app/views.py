@@ -1,12 +1,15 @@
 from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 
 from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
 
+
 def index(request):
     """The home page for Boardgame website."""
     return render(request, 'boardgame_app/index.html')
-
+    
+@login_required
 def topics(request):
     """Show all topics."""
     topics = Topic.objects.order_by('date_added')
