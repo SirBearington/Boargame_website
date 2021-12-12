@@ -12,9 +12,9 @@
      </h3></li>
  {% empty %}
 
-    <li><h3>No topics have been added yet.</h3></li>
+    <li><h3>No board games have been added yet.</h3></li>
  {% endfor %}
  </ul>
  
- <h3><a href="{% url 'boardgame_app:new_topic' %}">Add a new topic</a></h3>
+ <h3><a href="{% url 'boardgame_app:new_topic' %}">Add a new board game</a></h3>
 {% endblock content %}
